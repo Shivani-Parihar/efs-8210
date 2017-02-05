@@ -131,4 +131,35 @@
             echo "<br />";
             echo '<span style = "font-size: 20px;"> Total of Current Portfolio : $' . ($total + $total_current) . '</span>';
     ?>
+
+    <h1>Mutual Funds</h1>
+    <hr>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr class="bg-info">
+            <th>Scheme</th>
+            <th>Nominee</th>
+            <th>Relationship with nominee</th>
+            <th>Balance Amount</th>
+            <th>Aquired Date</th>
+            <th>Investment Amount</th>
+            <th>Current Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($mutual_Funds as $mutual_Fund)
+            <tr>
+                <td>{{ $mutual_Fund->scheme }}</td>
+                <td>{{ $mutual_Fund->nominee }}</td>
+                <td>{{ $mutual_Fund->relationship_with_nominee }}</td>
+                <td>{{ $mutual_Fund->balance_amount }}</td>
+                <td>{{ $mutual_Fund->acquired_date }}</td>
+                <td>{{ $mutual_Fund->investment_amount }}</td>
+                <td>{{ $mutual_Fund->current_value }}</td>
+            </tr>
+        @endforeach
+
+        </tbody>
+
+    </table>
     @stop

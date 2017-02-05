@@ -80,7 +80,7 @@ class MutualFundsDataSeeder extends Seeder {
     {
         DB::table('mutual_funds')->delete();
         MutualFunds::create(['scheme' => 'Fixed income funds', 'nominee' => 'Priya Sharma', 'relationship_with_nominee' => 'sister',
-        'balance_amount' => '2000', 'acquired_date' => date(2008-03-05), 'investment_amount' => '35000', 'current_value' => '50000',
+        'balance_amount' => '2000', 'acquired_date' => date('2008-03-05'), 'investment_amount' => '35000', 'current_value' => '50000',
         'customer_id' => 1, 'created_at' => date_create(), 'updated_at' => date_create()]);
     }
 }

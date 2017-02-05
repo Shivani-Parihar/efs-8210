@@ -12,6 +12,8 @@ use App\Stock;
 
 use App\Investment;
 
+use App\MutualFunds;
+
 class CustomerController extends Controller
 {
     public function index()
@@ -26,7 +28,8 @@ class CustomerController extends Controller
         $customer = Customer::findOrFail($id);
         $stocks = Stock::all();
         $investments = Investment::all();
-        return view('customers.show',compact('customer', 'stocks', 'investments'));
+        $mutual_Funds = MutualFunds::all();
+        return view('customers.show',compact('customer', 'stocks', 'investments', 'mutual_Funds'));
     }
 
 
